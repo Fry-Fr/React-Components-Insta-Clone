@@ -46,7 +46,7 @@ const App = () => {
       {/* Add SearchBar and Posts here to render them */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
       <SearchBar/>
-      <Posts likePost={likePost} posts={posts}/>
+      <Posts key={posts.forEach(item => {return item.id})} likePost={likePost} posts={posts}/>
     </div>
   );
 };
