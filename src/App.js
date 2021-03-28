@@ -18,6 +18,22 @@ const App = () => {
   // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
   const [posts, setPosts] = useState(dummyData)
+  const [inputValue, setInputValue] = useState(null)
+
+  const input = (event) => {
+    const { value } = event.target
+    const set = posts.filter( (post) => {
+      if(post.username.substring(0,3).toLowerCase() === value.toLowerCase()) {
+        setInputValue(post)
+        console.log(inputValue)
+      }else if(!value) {
+        setInputValue(null)
+      }
+    })
+
+    return set    
+
+  }
 
   const likePost = postId => {
     /*
@@ -41,12 +57,13 @@ const App = () => {
     setPosts(newPosts)
   };
 
+
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
-      <SearchBar/>
-      <Posts key={posts.forEach(item => {return item.id})} likePost={likePost} posts={posts}/>
+      <SearchBar input={input}/>
+      <Posts input={inputValue} key={posts.forEach(item => {return item.id})} likePost={likePost} posts={posts}/>
     </div>
   );
 };

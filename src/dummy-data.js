@@ -54,6 +54,31 @@ const dummyData = [
             },
         ],
     },
+    {
+        id: 3,
+        username: "Documentaireez",
+        thumbnailUrl: 'https://banner2.cleanpng.com/20180216/kee/kisspng-photographic-film-reel-clip-art-movie-film-5a8677562304e0.0541516415187618141435.jpg',
+        imageUrl: 'https://www.platformmagazine.co.uk/wp-content/uploads/2020/06/platform-feature-image-6.jpg',
+        likes: 31,
+        timestamp: "March 27th 2021, 11:42:00 pm",
+        comments: [
+            {
+                id: 10,
+                username: "why-phi",
+                text: "Terrific films about actual stories!",
+            },
+            {
+                id: 11,
+                username: "brainspell",
+                text: "Awesome... With perfectly subtle effects!",
+            },
+            {
+                id: 12,
+                username: "martinscorsese",
+                text: "I will not wait to see it!",
+            },
+        ],
+    }
 ];
 
 export default dummyData;
