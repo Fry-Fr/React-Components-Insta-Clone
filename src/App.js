@@ -23,7 +23,7 @@ const App = () => {
   const input = (event) => {
     const { value } = event.target
     const set = posts.filter( (post) => {
-      if(post.username.substring(0,3).toLowerCase() === value.toLowerCase()) {
+      if(post.username.toLowerCase() === value.toLowerCase()) {
         setInputValue(post)
         console.log(inputValue)
       }else if(!value) {
